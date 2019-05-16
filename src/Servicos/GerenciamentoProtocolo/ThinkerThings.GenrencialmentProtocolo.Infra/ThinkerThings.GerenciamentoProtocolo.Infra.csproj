@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>ThinkerThings.GerenciamentoProtocolo.Infra</AssemblyName>
+    <RootNamespace>ThinkerThings.GerenciamentoProtocolo.Infra</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Conectores\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThinkerThings.GenrencialmentProtocolo.Domain\ThinkerThings.GerenciamentoProtocolo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>ThinkerThings.GerenciamentoProtocolo.UnitTest</AssemblyName>
+
+    <RootNamespace>ThinkerThings.GerenciamentoProtocolo.UnitTest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="27.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+    <PackageReference Include="NSubstitute" Version="4.1.0" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ThinkerThings.GenrencialmentProtocolo.Api\ThinkerThings.GerenciamentoProtocolo.Api.csproj" />
+    <ProjectReference Include="..\..\ThinkerThings.GenrencialmentProtocolo.Domain\ThinkerThings.GerenciamentoProtocolo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
