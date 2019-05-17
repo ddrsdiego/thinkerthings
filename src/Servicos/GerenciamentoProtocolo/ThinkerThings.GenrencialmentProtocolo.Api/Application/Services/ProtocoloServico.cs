@@ -23,17 +23,36 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<Result<Protocolo>> ConsultarProtocoloPorNumero(string numeroProtocolo)
+        public async Task<Result<Protocolo>> ConsultarProtocoloPorNumero(string numeroProtocolo)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(numeroProtocolo))
+                return Result<Protocolo>.Fail($"{nameof(numeroProtocolo)} não preenchido para consulta");
+
+            try
+            {
+                var protocolo = await _protocoloRepositorio.ConsultarProtocoloPorNumero(numeroProtocolo);
+                return Result<Protocolo>.Ok(protocolo);
+            }
+            catch (Exception ex)
+            {
+                return Result<Protocolo>.Fail("");
+            }
         }
 
         public async Task<Result<string>> GerarNumeroProtocolo()
         {
             try
             {
-                await Task.CompletedTask;
-                return Result<string>.Ok(string.Empty);
+                var sulfixoNumeroProtocolo = await _protocoloRepositorio.ObterProximoNumeroProtocolo().ConfigureAwait(false);
+                if (sulfixoNumeroProtocolo <= 0)
+                    return Result<string>.Fail($"Método ObterProximoNumeroProtocolo retornou menor ou igual a zero. Valor {sulfixoNumeroProtocolo}");
+
+                var prefixoNumeroProtocolo = DateTimeOffset.Now.Year.ToString().PadRight(11, '0');
+
+                var proximoNumeroProtocolo = prefixoNumeroProtocolo.Remove(prefixoNumeroProtocolo.Length - sulfixoNumeroProtocolo.ToString().Length);
+
+                proximoNumeroProtocolo = proximoNumeroProtocolo.Insert(proximoNumeroProtocolo.Length, sulfixoNumeroProtocolo.ToString());
+                return Result<string>.Ok(proximoNumeroProtocolo);
             }
             catch (Exception ex)
             {
@@ -47,10 +66,10 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
         public async Task<Result> SolicitarProtocolo(Protocolo newProtocolo)
         {
             if (newProtocolo == null)
-                return Result.Fail("");
+                return Result.Fail($"{nameof(newProtocolo)} não deve ser nulo.");
 
             if (newProtocolo.SolicitanteProtocolo == null)
-                return Result.Fail("");
+                return Result.Fail($"{nameof(newProtocolo.SolicitanteProtocolo)} não deve ser nulo.");
 
             if (!newProtocolo.Detalhes.Any(x => x.ProtocoloDetalheItem.Key.Equals(ProtocoloDetalheItem.Solicitado.Key, StringComparison.InvariantCultureIgnoreCase)))
                 return Result.Fail("");
@@ -62,7 +81,10 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
             }
             catch (Exception ex)
             {
-                return Result.Fail("");
+                const string erroMessage = "Falha ao registrar protocolo";
+
+                _logger.LogError(erroMessage, ex);
+                return Result<string>.Fail(erroMessage);
             }
         }
     }

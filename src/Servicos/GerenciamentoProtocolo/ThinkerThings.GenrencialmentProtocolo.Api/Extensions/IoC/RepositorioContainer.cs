@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using ThinkerThings.GenrencialmentoProtocolo.Infra.Repositorios;
 using ThinkerThings.GerenciamentoProtocolo.Domain.AggregateModels.ProtocoloModel;
 using ThinkerThings.GerenciamentoProtocolo.Domain.AggregateModels.UsuarioModel;
 using ThinkerThings.GerenciamentoProtocolo.Infra.Repositorios;
