@@ -38,7 +38,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Domain.AggregateModels.ProtocoloM
         {
             var detalhe = _protocoloDetalhes.SingleOrDefault(x => x.ProtocoloDetalheId == protocoloDetalhe.ProtocoloDetalheId);
             if (detalhe != null)
-                Result.Fail("");
+                Result.Fail($"{protocoloDetalhe.ProtocoloDetalheItem.Message} já adicionado.");
 
             _protocoloDetalhes.Add(protocoloDetalhe);
             return Result.Ok();

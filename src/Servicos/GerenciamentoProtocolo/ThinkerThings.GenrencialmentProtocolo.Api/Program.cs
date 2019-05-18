@@ -13,7 +13,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api
 
         public static void Main(string[] args)
         {
-            Log.Logger = CreateSerilogLogger(Configuration);
+            //Log.Logger = CreateSerilogLogger(Configuration);
 
             var host = CreateWebHostBuilder(args);
 
@@ -24,7 +24,6 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api
             WebHost.CreateDefaultBuilder(args)
                 .UseKestrel()
                 .UseStartup<Startup>()
-                .UseConfiguration(Configuration)
                 .UseSerilog()
                 .Build();
 

@@ -33,7 +33,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Handlres
             if (validarRequestResult.IsFailure)
                 return Result<SolicitarAtendimentoResponse>.Fail(validarRequestResult.Messages);
 
-            var usuarioResult = await ConsultarUsuarioSolicitante(request);
+            var usuarioResult = await ConsultarUsuarioSolicitante(request).ConfigureAwait(false);
             if (usuarioResult.IsFailure)
                 return Result<SolicitarAtendimentoResponse>.Fail(usuarioResult.Messages);
 
@@ -41,20 +41,22 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Handlres
             if (gerarNumeroProtocoloResult.IsFailure)
                 return Result<SolicitarAtendimentoResponse>.Fail(gerarNumeroProtocoloResult.Messages);
 
-            var novoProtocolo = new Protocolo
-            {
-                NumeroProtocolo = gerarNumeroProtocoloResult.Value,
-                SolicitanteProtocolo = new ProtocoloUsuarioSolicitante
-                {
-                    NumeroDocumento = usuarioResult.Value.NumeroDocumento,
-                    EmailSolicitante = usuarioResult.Value.EmailSolicitante,
-                }
-            };
+            var registrarNovoProtocoloResult = await RegistrarNovoProtocolo(usuarioResult.Value, gerarNumeroProtocoloResult.Value).ConfigureAwait(false);
+            if (registrarNovoProtocoloResult.IsFailure)
+                return Result<SolicitarAtendimentoResponse>.Fail(registrarNovoProtocoloResult.Messages);
 
-            novoProtocolo.AdicionarDetalhe(new ProtocoloDetalhe(ProtocoloDetalheItem.Solicitado));
-            await _protocoloServico.SolicitarProtocolo(novoProtocolo).ConfigureAwait(false);
+            return Result<SolicitarAtendimentoResponse>.Ok(new SolicitarAtendimentoResponse(registrarNovoProtocoloResult.Value.NumeroProtocolo, registrarNovoProtocoloResult.Value.DataSolicitacao));
+        }
 
-            return Result<SolicitarAtendimentoResponse>.Ok(new SolicitarAtendimentoResponse(novoProtocolo.NumeroProtocolo, novoProtocolo.DataSolicitacao));
+        private static Result ValidarRequest(SolicitarAtendimentoCommand request)
+        {
+            var validator = new SolicitarAtendimentoCommandValidator();
+
+            var result = validator.Validate(request);
+            if (!result.IsValid)
+                return Result.Fail(result.Errors.Select(x => x.ErrorMessage));
+
+            return Result.Ok();
         }
 
         private async Task<Result<UsuarioSolicitante>> ConsultarUsuarioSolicitante(SolicitarAtendimentoCommand request)
@@ -77,17 +79,6 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Handlres
             }
         }
 
-        private static Result ValidarRequest(SolicitarAtendimentoCommand request)
-        {
-            var validator = new SolicitarAtendimentoCommandValidator();
-
-            var result = validator.Validate(request);
-            if (!result.IsValid)
-                return Result.Fail(result.Errors.Select(x => x.ErrorMessage));
-
-            return Result.Ok();
-        }
-
         private async Task<Result<string>> GerarNumeroProtocolo()
         {
             try
@@ -102,6 +93,45 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Handlres
             {
                 return Result<string>.Fail("");
             }
+        }
+
+        private async Task<Result<Protocolo>> RegistrarNovoProtocolo(UsuarioSolicitante usuarioResult, string gerarNumeroProtocoloResult)
+        {
+            try
+            {
+                var novoProtocoloResult = CriarNovoProtocolo(usuarioResult, gerarNumeroProtocoloResult);
+                if (novoProtocoloResult.IsFailure)
+                    return Result<Protocolo>.Fail(novoProtocoloResult.Messages);
+
+                var registrarNovoProtocoloResult = await _protocoloServico.RegistrarNovoProtocolo(novoProtocoloResult.Value).ConfigureAwait(false);
+                if (registrarNovoProtocoloResult.IsFailure)
+                    return Result<Protocolo>.Fail(registrarNovoProtocoloResult.Messages);
+
+                return Result<Protocolo>.Ok(novoProtocoloResult.Value);
+            }
+            catch (Exception ex)
+            {
+                return Result<Protocolo>.Fail("");
+            }
+        }
+
+        private static Result<Protocolo> CriarNovoProtocolo(UsuarioSolicitante usuarioResult, string gerarNumeroProtocoloResult)
+        {
+            var novoProtocolo = new Protocolo
+            {
+                NumeroProtocolo = gerarNumeroProtocoloResult,
+                SolicitanteProtocolo = new ProtocoloUsuarioSolicitante
+                {
+                    NumeroDocumento = usuarioResult.NumeroDocumento,
+                    EmailSolicitante = usuarioResult.EmailSolicitante,
+                }
+            };
+
+            var adicionarDetalheResult = novoProtocolo.AdicionarDetalhe(new ProtocoloDetalhe(ProtocoloDetalheItem.Solicitado));
+            if (adicionarDetalheResult.IsFailure)
+                return Result<Protocolo>.Fail(adicionarDetalheResult.Messages);
+
+            return Result<Protocolo>.Ok(novoProtocolo);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Bogus;
 using Bogus.Extensions.Brazil;
+using FluentAssertions;
 using MediatR;
 using NSubstitute;
 using NUnit.Framework;
@@ -103,11 +104,48 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
             usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
 
             //Act
-            var handler = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
-            var response = await handler.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
+            var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
+            var response = await sut.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
 
             //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.IsNotNull(response);
+                Assert.IsInstanceOf<Result<SolicitarAtendimentoResponse>>(response);
+                Assert.IsNull(response.Value);
+                Assert.IsTrue(response.IsFailure);
+                Assert.AreEqual(1, response.Messages.Count);
+            });
+        }
+
+        [Test]
+        public async Task Deve_Falhar_Quando_RegistrarNovoProtocolo_Retonar_Falha()
+        {
+            //Arrange
+            var novoNumeroProtocolo = Guid.NewGuid().ToString();
+            var usuarioSolicitante = FakeData.SolicitarAtendimentoCommandValido;
+
+            protocoloServico.GerarNumeroProtocolo()
+                .Returns(_ => Result<string>.Ok(novoNumeroProtocolo));
+
+            protocoloServico.RegistrarNovoProtocolo(Arg.Any<Protocolo>())
+                .Returns(_ => Result.Fail(""));
+
+            usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+
+            mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>())
+                .Returns(_ => Result<RegistrarNovoUsuarioSolicitanteResponse>.Ok(new RegistrarNovoUsuarioSolicitanteResponse
+                {
+                    NumeroDocumento = usuarioSolicitante.NumeroDocumento,
+                    EmailSolicitante = usuarioSolicitante.EmailSolicitante
+                }));
+
+            //Act
+            var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
+            var response = await sut.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
+
             //Assert
+            protocoloServico.Received().RegistrarNovoProtocolo(Arg.Any<Protocolo>()).GetAwaiter();
             Assert.Multiple(() =>
             {
                 Assert.IsNotNull(response);
@@ -122,8 +160,9 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
         public async Task Deve_Retornar_Usuario_Solicitante_Quando_Requisitar_Novo_Cadastro_Usuario_Solicitante()
         {
             //Arrange
+            var novoNumeroProtocolo = Guid.NewGuid().ToString();
             var usuarioSolicitante = FakeData.SolicitarAtendimentoCommandValido;
-            protocoloServico.GerarNumeroProtocolo().Returns(_ => Result<string>.Ok(Guid.NewGuid().ToString()));
+            protocoloServico.GerarNumeroProtocolo().Returns(_ => Result<string>.Ok(novoNumeroProtocolo));
             usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
 
             mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>())
@@ -134,32 +173,11 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
                 }));
 
             //Act
-            var handler = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
-            var response = await handler.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
+            var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
+            var response = await sut.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
 
-            //Assert
-            //Assert.Multiple(() =>
-            //{
-            //    Assert.IsNotNull(response);
-            //    Assert.IsInstanceOf<Result<SolicitarAtendimentoResponse>>(response);
-            //    Assert.IsNull(response.Value);
-            //    Assert.IsTrue(response.IsFailure);
-            //    Assert.AreEqual(1, response.Messages.Count);
-            //});
-        }
-
-        [Test]
-        public async Task Handle()
-        {
-            //Arrange
-            protocoloServico.GerarNumeroProtocolo().Returns(_ => Result<string>.Ok(Guid.NewGuid().ToString()));
-            var handler = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
-
-            //Act
-            var command = FakeData.SolicitarAtendimentoCommandValido;
-            var response = await handler.Handle(command, default(CancellationToken)).ConfigureAwait(false);
-
-            //Assert
+            protocoloServico.Received().RegistrarNovoProtocolo(Arg.Any<Protocolo>()).GetAwaiter();
+            response.Value.NovoNumeroProtocolo.Should().Be(novoNumeroProtocolo);
         }
 
         [TearDown]
@@ -180,7 +198,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
             get
             {
                 return new Faker<SolicitarAtendimentoCommand>(LOCALE)
-                    .CustomInstantiator(f => new SolicitarAtendimentoCommand(string.Empty, string.Empty, string.Empty, string.Empty));
+                    .CustomInstantiator(_ => new SolicitarAtendimentoCommand(string.Empty, string.Empty, string.Empty, string.Empty));
             }
         }
 

@@ -7,7 +7,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Domain.AggregateModels.ProtocoloM
     {
         Task<Result<string>> GerarNumeroProtocolo();
 
-        Task<Result> SolicitarProtocolo(Protocolo newProtocolo);
+        Task<Result> RegistrarNovoProtocolo(Protocolo newProtocolo);
 
         Task<Result> Alterar(Protocolo newProtocolo);
 

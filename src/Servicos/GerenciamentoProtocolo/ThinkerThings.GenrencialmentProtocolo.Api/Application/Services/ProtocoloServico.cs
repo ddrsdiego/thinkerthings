@@ -63,7 +63,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
             }
         }
 
-        public async Task<Result> SolicitarProtocolo(Protocolo newProtocolo)
+        public async Task<Result> RegistrarNovoProtocolo(Protocolo newProtocolo)
         {
             if (newProtocolo == null)
                 return Result.Fail($"{nameof(newProtocolo)} não deve ser nulo.");

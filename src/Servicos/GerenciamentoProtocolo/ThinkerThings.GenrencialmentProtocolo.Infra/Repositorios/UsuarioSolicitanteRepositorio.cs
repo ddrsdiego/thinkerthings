@@ -13,9 +13,11 @@ namespace ThinkerThings.GerenciamentoProtocolo.Infra.Repositorios
         {
         }
 
-        public Task<UsuarioSolicitante> ConsultarUsuarioSolicitante(string numeroDocumento, string email)
+        public async Task<UsuarioSolicitante> ConsultarUsuarioSolicitante(string numeroDocumento, string email)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
+
+            return default(UsuarioSolicitante);
         }
 
         public Task RegistrarUsuarioSolicitante(UsuarioSolicitante usuarioSolicitante)
