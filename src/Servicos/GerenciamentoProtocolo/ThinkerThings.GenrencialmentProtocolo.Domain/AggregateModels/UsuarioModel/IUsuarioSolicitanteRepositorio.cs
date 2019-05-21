@@ -6,6 +6,8 @@ namespace ThinkerThings.GerenciamentoProtocolo.Domain.AggregateModels.UsuarioMod
     {
         Task RegistrarUsuarioSolicitante(UsuarioSolicitante usuarioSolicitante);
 
-        Task<UsuarioSolicitante> ConsultarUsuarioSolicitante(string numeroDocumento, string email);
+        Task<UsuarioSolicitante> ConsultarUsuarioSolicitantePorCPF(string cpfSolicitante);
+
+        Task<UsuarioSolicitante> ConsultarUsuarioSolicitantePorEmail(string emailSolicitante);
     }
 }

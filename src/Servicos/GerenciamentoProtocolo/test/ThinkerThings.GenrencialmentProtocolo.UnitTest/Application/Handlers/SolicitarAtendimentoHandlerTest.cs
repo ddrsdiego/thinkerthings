@@ -76,7 +76,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
         public async Task Deve_Retornar_Falha_Quando_Consultar_Usuario_Requisicao_Cadastro_Retornar_Null()
         {
             //Arrange
-            usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+            usuarioSolicitanteServico.ConsultarUsuarioSolicitantePorCPF(Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
             protocoloServico.GerarNumeroProtocolo().Returns(_ => Result<string>.Ok(Guid.NewGuid().ToString()));
 
             //Act
@@ -90,32 +90,41 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
                 Assert.IsNotNull(response);
                 Assert.IsInstanceOf<Result<SolicitarAtendimentoResponse>>(response);
                 Assert.IsNull(response.Value);
-                Assert.IsTrue(response.IsFailure);
-                Assert.AreEqual(1, response.Messages.Count);
             });
+
+            response.IsFailure.Should().BeTrue();
+            response.Messages.Count.Should().Be(1);
         }
 
         [Test]
         public async Task Deve_Retornar_Falha_Quando_Consultar_Usuario_Solicitante_Requisicao_Cadastro_Retornar_Falha()
         {
             //Arrange
-            protocoloServico.GerarNumeroProtocolo().Returns(_ => Result<string>.Ok(Guid.NewGuid().ToString()));
-            mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>()).Returns(_ => Result<RegistrarNovoUsuarioSolicitanteResponse>.Fail(""));
-            usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+            protocoloServico.GerarNumeroProtocolo()
+                .Returns(_ => Result<string>.Ok(Guid.NewGuid().ToString()));
+
+            usuarioSolicitanteServico.ConsultarUsuarioSolicitantePorCPF(Arg.Any<string>())
+                .Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+
+            mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>())
+                .Returns(_ => Result<RegistrarNovoUsuarioSolicitanteResponse>.Fail(""));
+
+            var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
 
             //Act
-            var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
             var response = await sut.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
 
             //Assert
+
             Assert.Multiple(() =>
             {
                 Assert.IsNotNull(response);
                 Assert.IsInstanceOf<Result<SolicitarAtendimentoResponse>>(response);
                 Assert.IsNull(response.Value);
-                Assert.IsTrue(response.IsFailure);
-                Assert.AreEqual(1, response.Messages.Count);
             });
+
+            response.IsFailure.Should().BeTrue();
+            response.Messages.Count.Should().Be(1);
         }
 
         [Test]
@@ -131,12 +140,11 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
             protocoloServico.RegistrarNovoProtocolo(Arg.Any<Protocolo>())
                 .Returns(_ => Result.Fail(""));
 
-            usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+            usuarioSolicitanteServico.ConsultarUsuarioSolicitantePorCPF(Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
 
             mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>())
                 .Returns(_ => Result<RegistrarNovoUsuarioSolicitanteResponse>.Ok(new RegistrarNovoUsuarioSolicitanteResponse
                 {
-                    NumeroDocumento = usuarioSolicitante.NumeroDocumento,
                     EmailSolicitante = usuarioSolicitante.EmailSolicitante
                 }));
 
@@ -162,19 +170,26 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
             //Arrange
             var novoNumeroProtocolo = Guid.NewGuid().ToString();
             var usuarioSolicitante = FakeData.SolicitarAtendimentoCommandValido;
-            protocoloServico.GerarNumeroProtocolo().Returns(_ => Result<string>.Ok(novoNumeroProtocolo));
-            usuarioSolicitanteServico.ConsultarUsuarioSolicitante(Arg.Any<string>(), Arg.Any<string>()).Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+
+            usuarioSolicitanteServico.ConsultarUsuarioSolicitantePorCPF(Arg.Any<string>())
+                .Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+
+            protocoloServico.GerarNumeroProtocolo()
+                .Returns(_ => Result<string>.Ok(novoNumeroProtocolo));
+
+            protocoloServico.RegistrarNovoProtocolo(Arg.Any<Protocolo>())
+                .Returns(_ => Result.Ok());
 
             mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>())
                 .Returns(_ => Result<RegistrarNovoUsuarioSolicitanteResponse>.Ok(new RegistrarNovoUsuarioSolicitanteResponse
                 {
-                    NumeroDocumento = usuarioSolicitante.NumeroDocumento,
+                    CPFSolicitante = usuarioSolicitante.CPFSolicitante,
                     EmailSolicitante = usuarioSolicitante.EmailSolicitante
                 }));
 
             //Act
             var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
-            var response = await sut.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
+            var response = await sut.Handle(usuarioSolicitante, default(CancellationToken)).ConfigureAwait(false);
 
             protocoloServico.Received().RegistrarNovoProtocolo(Arg.Any<Protocolo>()).GetAwaiter();
             response.Value.NovoNumeroProtocolo.Should().Be(novoNumeroProtocolo);
@@ -189,7 +204,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
         }
     }
 
-    public static class FakeData
+    internal static partial class FakeData
     {
         private const string LOCALE = "pt_BR";
 

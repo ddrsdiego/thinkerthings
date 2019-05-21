@@ -8,6 +8,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
 {
     public class UsuarioSolicitanteServico : IUsuarioSolicitanteServico
     {
+        private bool _disposed = false;
         private readonly ILogger<UsuarioSolicitanteServico> _logger;
         private readonly IUsuarioSolicitanteRepositorio _usuarioSolicitanteRepositorio;
 
@@ -17,27 +18,23 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
             _logger = loggerFactory.CreateLogger<UsuarioSolicitanteServico>();
         }
 
-        public async Task<Result<UsuarioSolicitante>> ConsultarUsuarioSolicitante(string numeroDocumento, string email)
+        public async Task<Result<UsuarioSolicitante>> ConsultarUsuarioSolicitantePorCPF(string cpfSolicitante)
         {
-            if (numeroDocumento == null)
-                return Result<UsuarioSolicitante>.Fail($"{nameof(numeroDocumento)} não deve ser branco ou nulo.");
-
-            if (email == null)
-                return Result<UsuarioSolicitante>.Fail($"{nameof(email)} não deve ser branco ou nulo.");
+            if (cpfSolicitante == null)
+                return Result<UsuarioSolicitante>.Fail($"{nameof(cpfSolicitante)} não deve ser branco ou nulo.");
 
             try
             {
-                var usuarioSolicitante = await _usuarioSolicitanteRepositorio.ConsultarUsuarioSolicitante(numeroDocumento, email);
-                if (usuarioSolicitante == null)
-                    return Result<UsuarioSolicitante>.Fail("");
-
-                return Result<UsuarioSolicitante>.Ok(usuarioSolicitante);
+                return ResultadoConsultaUsuarioSolicitante(await _usuarioSolicitanteRepositorio.ConsultarUsuarioSolicitantePorCPF(cpfSolicitante));
             }
             catch (Exception ex)
             {
                 return Result<UsuarioSolicitante>.Fail("");
             }
         }
+
+        public async Task<Result<UsuarioSolicitante>> ConsultarUsuarioSolicitantePorEmail(string emailUsuarioSolicitante)
+            => await ExecutarConsultaUsuarioSolicitantePorEmail(emailUsuarioSolicitante).ConfigureAwait(false);
 
         public async Task<Result> RegistrarUsuarioSolicitante(UsuarioSolicitante usuarioSolicitante)
         {
@@ -53,6 +50,29 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Services
             {
                 return Result.Fail("");
             }
+        }
+
+        private async Task<Result<UsuarioSolicitante>> ExecutarConsultaUsuarioSolicitantePorEmail(string emailUsuarioSolicitante)
+        {
+            if (emailUsuarioSolicitante == null)
+                return Result<UsuarioSolicitante>.Fail($"{nameof(emailUsuarioSolicitante)} não deve ser branco ou nulo.");
+
+            try
+            {
+                return ResultadoConsultaUsuarioSolicitante(await _usuarioSolicitanteRepositorio.ConsultarUsuarioSolicitantePorEmail(emailUsuarioSolicitante));
+            }
+            catch (Exception ex)
+            {
+                return Result<UsuarioSolicitante>.Fail("");
+            }
+        }
+
+        private static Result<UsuarioSolicitante> ResultadoConsultaUsuarioSolicitante(UsuarioSolicitante usuarioSolicitante)
+        {
+            if (usuarioSolicitante == null)
+                return Result<UsuarioSolicitante>.Fail("");
+
+            return Result<UsuarioSolicitante>.Ok(usuarioSolicitante);
         }
     }
 }

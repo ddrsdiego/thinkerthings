@@ -10,7 +10,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Validators
             RuleFor(command => command.NomeSolicitante).NotEmpty().Length(3, 30);
             RuleFor(command => command.EmailSolicitante).NotEmpty().EmailAddress();
             RuleFor(command => command.TelefoneSolicitante).NotEmpty();
-            RuleFor(command => command.NumeroDocumento).NotEmpty();
+            RuleFor(command => command.CPFSolicitante).NotEmpty();
         }
     }
 }

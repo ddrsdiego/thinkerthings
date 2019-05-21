@@ -6,17 +6,17 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Commands
 {
     public class RegistrarNovoUsuarioSolicitanteCommand : IRequest<Result<RegistrarNovoUsuarioSolicitanteResponse>>
     {
-        public RegistrarNovoUsuarioSolicitanteCommand(string numeroDocumento, string emailSolicitante, string nomeSolicitante, string telefoneSolicitante)
+        public RegistrarNovoUsuarioSolicitanteCommand(string emailSolicitante, string nomeSolicitante, string telefoneSolicitante, string cpfSolicitante)
         {
-            NumeroDocumento = numeroDocumento;
             EmailSolicitante = emailSolicitante;
             NomeSolicitante = nomeSolicitante;
             TelefoneSolicitante = telefoneSolicitante;
+            CPFSolicitante = cpfSolicitante;
         }
 
-        public string NumeroDocumento { get; }
         public string EmailSolicitante { get; }
         public string NomeSolicitante { get; }
         public string TelefoneSolicitante { get; }
+        public string CPFSolicitante { get; }
     }
 }

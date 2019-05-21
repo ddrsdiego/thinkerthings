@@ -9,8 +9,9 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Extensions.IoC
     {
         public static IServiceCollection AddRepositorios(this IServiceCollection services)
         {
-            services.AddTransient<IProtocoloRepositorio, ProtocoloRepositorio>();
-            services.AddTransient<IUsuarioSolicitanteRepositorio, UsuarioSolicitanteRepositorio>();
+            services.AddScoped<IProtocoloRepositorio, ProtocoloRepositorio>();
+            services.AddScoped<IUsuarioSolicitanteRepositorio, UsuarioSolicitanteRepositorio>();
+
             return services;
         }
     }

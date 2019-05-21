@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System;
 using System.Threading.Tasks;
 using ThinkerThings.GerenciamentoProtocolo.Domain.AggregateModels.UsuarioModel;
 
@@ -13,16 +12,23 @@ namespace ThinkerThings.GerenciamentoProtocolo.Infra.Repositorios
         {
         }
 
-        public async Task<UsuarioSolicitante> ConsultarUsuarioSolicitante(string numeroDocumento, string email)
+        public async Task<UsuarioSolicitante> ConsultarUsuarioSolicitantePorCPF(string cpfSolicitante)
         {
             await Task.CompletedTask;
 
             return default(UsuarioSolicitante);
         }
 
-        public Task RegistrarUsuarioSolicitante(UsuarioSolicitante usuarioSolicitante)
+        public async Task<UsuarioSolicitante> ConsultarUsuarioSolicitantePorEmail(string emailSolicitante)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
+
+            return default(UsuarioSolicitante);
+        }
+
+        public async Task RegistrarUsuarioSolicitante(UsuarioSolicitante usuarioSolicitante)
+        {
+            await Task.CompletedTask;
         }
     }
 }

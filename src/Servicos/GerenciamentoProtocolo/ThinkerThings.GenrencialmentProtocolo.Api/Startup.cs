@@ -1,12 +1,9 @@
-﻿using Castle.Windsor;
-using Castle.Windsor.MsDependencyInjection;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System;
 using ThinkerThings.GerenciamentoProtocolo.Api.Extensions.IoC;
 
 namespace ThinkerThings.GerenciamentoProtocolo.Api
@@ -25,10 +22,11 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api
 
         public static void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             services.AddLogging();
             services.AddSingleton<ILoggerFactory, LoggerFactory>();
             services.AddGerenciamentoProtocoloServices();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         public static void Configure(IApplicationBuilder app, IHostingEnvironment env)

@@ -63,15 +63,15 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Handlres
         {
             try
             {
-                var usuarioResult = await _usuarioSolicitanteServico.ConsultarUsuarioSolicitante(request.NumeroDocumento, request.EmailSolicitante);
+                var usuarioResult = await _usuarioSolicitanteServico.ConsultarUsuarioSolicitantePorCPF(request.CPFSolicitante);
                 if (usuarioResult.IsSuccess)
                     return Result<UsuarioSolicitante>.Ok(usuarioResult.Value);
 
-                var response = await _mediator.Send(new RegistrarNovoUsuarioSolicitanteCommand(request.NumeroDocumento, request.EmailSolicitante, request.NomeSolicitante, request.TelefoneSolicitante));
+                var response = await _mediator.Send(new RegistrarNovoUsuarioSolicitanteCommand(request.EmailSolicitante, request.NomeSolicitante, request.TelefoneSolicitante, request.CPFSolicitante));
                 if (response.IsFailure)
                     return Result<UsuarioSolicitante>.Fail(response.Messages);
 
-                return Result<UsuarioSolicitante>.Ok(new UsuarioSolicitante { NumeroDocumento = response.Value.NumeroDocumento, EmailSolicitante = response.Value.EmailSolicitante });
+                return Result<UsuarioSolicitante>.Ok(new UsuarioSolicitante { CPFSolicitante = response.Value.CPFSolicitante, EmailSolicitante = response.Value.EmailSolicitante });
             }
             catch (Exception ex)
             {
@@ -120,11 +120,7 @@ namespace ThinkerThings.GerenciamentoProtocolo.Api.Application.Handlres
             var novoProtocolo = new Protocolo
             {
                 NumeroProtocolo = gerarNumeroProtocoloResult,
-                SolicitanteProtocolo = new ProtocoloUsuarioSolicitante
-                {
-                    NumeroDocumento = usuarioResult.NumeroDocumento,
-                    EmailSolicitante = usuarioResult.EmailSolicitante,
-                }
+                SolicitanteProtocolo = new ProtocoloUsuarioSolicitante { EmailSolicitante = usuarioResult.EmailSolicitante }
             };
 
             var adicionarDetalheResult = novoProtocolo.AdicionarDetalhe(new ProtocoloDetalhe(ProtocoloDetalheItem.Solicitado));
