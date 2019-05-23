@@ -13,15 +13,18 @@ namespace ThinkerThings.TitanFlash.RabbitMq.Monitor
         private readonly ILogger _logger;
         private readonly IConnectionFactory _connectionFactory;
 
-        public TitanFlashMonitor(IConnectionFactory connectionFactory, ILoggerFactory loggerFactory)
+        public static TitanFlashMonitor Create(IConnectionFactory connectionFactory, ILoggerFactory loggerFactory)
+        {
+            return new TitanFlashMonitor(connectionFactory, loggerFactory);
+        }
+
+        private TitanFlashMonitor(IConnectionFactory connectionFactory, ILoggerFactory loggerFactory)
         {
             _logger = loggerFactory.CreateLogger(nameof(TitanFlashMonitor)) ?? throw new ArgumentException(nameof(loggerFactory));
             _connectionFactory = connectionFactory ?? throw new ArgumentNullException(nameof(connectionFactory));
 
             if (connectionFactory != null)
-            {
                 _uriApi = new Uri($"http://{connectionFactory.Uri.Host}:1{connectionFactory.Uri.Port}/api");
-            }
         }
 
         public bool HealthCheck()

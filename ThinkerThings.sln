@@ -43,17 +43,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A4469B96-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.GerenciamentoProtocolo.IntegrationTest", "src\Servicos\GerenciamentoProtocolo\test\ThinkerThings.GerenciamentoProtocolo.IntegrationTest\ThinkerThings.GerenciamentoProtocolo.IntegrationTest.csproj", "{8DFFAA20-63D1-4320-A1C1-790C2ED33B89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Usuarios.Conta.Domain", "src\Servicos\Usuarios\ThinkerThings.Servicos.Usuarios.Conta.Domain\ThinkerThings.Servicos.Usuarios.Conta.Domain.csproj", "{0ED73D4C-D6FB-459B-B402-ACFA79527ED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Usuarios.Conta.Domain", "src\Servicos\Usuarios\ThinkerThings.Servicos.Usuarios.Conta.Domain\ThinkerThings.Servicos.Usuarios.Conta.Domain.csproj", "{0ED73D4C-D6FB-459B-B402-ACFA79527ED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Usuarios.Conta.Api", "src\Servicos\Usuarios\ThinkerThings.Servicos.Usuarios.Conta.Api\ThinkerThings.Servicos.Usuarios.Conta.Api.csproj", "{76D8ED3A-00E7-4AFF-A65F-89E1C9D14BB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Usuarios.Conta.Api", "src\Servicos\Usuarios\ThinkerThings.Servicos.Usuarios.Conta.Api\ThinkerThings.Servicos.Usuarios.Conta.Api.csproj", "{76D8ED3A-00E7-4AFF-A65F-89E1C9D14BB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Usuarios.Conta.Infra", "src\Servicos\Usuarios\ThinkerThings.Servicos.Usuarios.Conta.Infra\ThinkerThings.Servicos.Usuarios.Conta.Infra.csproj", "{1A011717-A25F-4B8D-A153-44416D2EBFED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Usuarios.Conta.Infra", "src\Servicos\Usuarios\ThinkerThings.Servicos.Usuarios.Conta.Infra\ThinkerThings.Servicos.Usuarios.Conta.Infra.csproj", "{1A011717-A25F-4B8D-A153-44416D2EBFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Usuarios.Conta.UnitTest", "src\Servicos\Usuarios\test\ThinkerThings.Servicos.Usuarios.Conta.UnitTest\ThinkerThings.Servicos.Usuarios.Conta.UnitTest.csproj", "{C830AF18-E74A-42BF-885A-D3A944D77BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Usuarios.Conta.UnitTest", "src\Servicos\Usuarios\test\ThinkerThings.Servicos.Usuarios.Conta.UnitTest\ThinkerThings.Servicos.Usuarios.Conta.UnitTest.csproj", "{C830AF18-E74A-42BF-885A-D3A944D77BBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Indetity.Api", "src\Servicos\Usuarios\ThinkerThings.Servicos.Indetity.Api\ThinkerThings.Servicos.Indetity.Api.csproj", "{D3D38887-EE08-4790-8845-46BFE4ED7F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Indetity.Api", "src\Servicos\Usuarios\ThinkerThings.Servicos.Indetity.Api\ThinkerThings.Servicos.Indetity.Api.csproj", "{D3D38887-EE08-4790-8845-46BFE4ED7F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Usuarios.Conta.IntegrationTest", "src\Servicos\Usuarios\test\ThinkerThings.Servicos.Usuarios.Conta.IntegrationTest\ThinkerThings.Servicos.Usuarios.Conta.IntegrationTest.csproj", "{DAE3FC28-0722-492A-B3BE-1CE71748F6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Usuarios.Conta.IntegrationTest", "src\Servicos\Usuarios\test\ThinkerThings.Servicos.Usuarios.Conta.IntegrationTest\ThinkerThings.Servicos.Usuarios.Conta.IntegrationTest.csproj", "{DAE3FC28-0722-492A-B3BE-1CE71748F6F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Genrenciador.Usuarios", "Genrenciador.Usuarios", "{90C066AE-BC7D-4A69-9E7B-53C2D8C24E1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThinkerThings.Servicos.Gerenciador.Usuarios.Api", "src\Servicos\Gerenciador.Usuarios\ThinkerThings.Servicos.Gerenciador.Usuarios.Api\ThinkerThings.Servicos.Gerenciador.Usuarios.Api.csproj", "{8773B768-DDCF-4AA3-91A5-9C4E9647B57C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9C389354-E91D-4E1C-BBD5-B764540C0A4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Gerenciador.Usuarios.Domain", "src\Servicos\Gerenciador.Usuarios\ThinkerThings.Servicos.Gerenciador.Usuarios.Domain\ThinkerThings.Servicos.Gerenciador.Usuarios.Domain.csproj", "{B6CAAE23-AA59-4A65-AADA-841D8700BF7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Gerenciador.Usuarios.Infra", "src\Servicos\Gerenciador.Usuarios\ThinkerThings.Servicos.Gerenciador.Usuarios.Infra\ThinkerThings.Servicos.Gerenciador.Usuarios.Infra.csproj", "{4FE2B0A0-1BB5-4B9A-8B40-B7B5C720CE4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThinkerThings.Servicos.Gerenciador.Usuarios.UnitTest", "src\Servicos\Gerenciador.Usuarios\test\ThinkerThings.Servicos.Gerenciador.Usuarios.UnitTest\ThinkerThings.Servicos.Gerenciador.Usuarios.UnitTest.csproj", "{B5153C95-293A-43AE-A51A-38EDE9A02F54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +133,22 @@ Global
 		{DAE3FC28-0722-492A-B3BE-1CE71748F6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAE3FC28-0722-492A-B3BE-1CE71748F6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAE3FC28-0722-492A-B3BE-1CE71748F6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8773B768-DDCF-4AA3-91A5-9C4E9647B57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8773B768-DDCF-4AA3-91A5-9C4E9647B57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8773B768-DDCF-4AA3-91A5-9C4E9647B57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8773B768-DDCF-4AA3-91A5-9C4E9647B57C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CAAE23-AA59-4A65-AADA-841D8700BF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CAAE23-AA59-4A65-AADA-841D8700BF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CAAE23-AA59-4A65-AADA-841D8700BF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CAAE23-AA59-4A65-AADA-841D8700BF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE2B0A0-1BB5-4B9A-8B40-B7B5C720CE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE2B0A0-1BB5-4B9A-8B40-B7B5C720CE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE2B0A0-1BB5-4B9A-8B40-B7B5C720CE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE2B0A0-1BB5-4B9A-8B40-B7B5C720CE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5153C95-293A-43AE-A51A-38EDE9A02F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5153C95-293A-43AE-A51A-38EDE9A02F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5153C95-293A-43AE-A51A-38EDE9A02F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5153C95-293A-43AE-A51A-38EDE9A02F54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +176,12 @@ Global
 		{C830AF18-E74A-42BF-885A-D3A944D77BBB} = {A4469B96-680D-4E6F-805C-AFAAE6FF2858}
 		{D3D38887-EE08-4790-8845-46BFE4ED7F64} = {0E1FC97F-BAED-4D12-9602-6B72CC24AA97}
 		{DAE3FC28-0722-492A-B3BE-1CE71748F6F1} = {A4469B96-680D-4E6F-805C-AFAAE6FF2858}
+		{90C066AE-BC7D-4A69-9E7B-53C2D8C24E1C} = {CDD196F0-20E0-4A82-9095-5C8485DC5AB7}
+		{8773B768-DDCF-4AA3-91A5-9C4E9647B57C} = {90C066AE-BC7D-4A69-9E7B-53C2D8C24E1C}
+		{9C389354-E91D-4E1C-BBD5-B764540C0A4D} = {90C066AE-BC7D-4A69-9E7B-53C2D8C24E1C}
+		{B6CAAE23-AA59-4A65-AADA-841D8700BF7D} = {90C066AE-BC7D-4A69-9E7B-53C2D8C24E1C}
+		{4FE2B0A0-1BB5-4B9A-8B40-B7B5C720CE4F} = {90C066AE-BC7D-4A69-9E7B-53C2D8C24E1C}
+		{B5153C95-293A-43AE-A51A-38EDE9A02F54} = {9C389354-E91D-4E1C-BBD5-B764540C0A4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {591B6C0A-9381-4D08-B76E-9D347929ABDF}

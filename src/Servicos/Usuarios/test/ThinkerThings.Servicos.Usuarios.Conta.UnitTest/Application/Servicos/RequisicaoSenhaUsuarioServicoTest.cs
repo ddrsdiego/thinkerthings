@@ -26,10 +26,10 @@ namespace ThinkerThings.Servicos.Usuarios.Conta.UnitTest.Application.Servicos
         public void Teste()
         {
             //Arrange
-            const int TEMPO_EXPIRACAO = 8;
+            const int TEMPO_EXPIRACAO_EM_HORAS = 8;
 
             configuracoesHashOptions.Value
-                .Returns(_ => new ConfiguracoesHash { TempoExpiracaoEmHoras = TEMPO_EXPIRACAO });
+                .Returns(_ => new ConfiguracoesHash { TempoExpiracaoEmHoras = TEMPO_EXPIRACAO_EM_HORAS });
 
             var sut = new RequisicaoSenhaUsuarioServico(requisicaoSenhaUsuarioRepositorio, configuracoesHashOptions);
             var requisicaoSenha = RequisicaoSenhaUsuario.Criar(FakeData.UsuarioValido, DateTimeOffset.Now);
@@ -46,10 +46,10 @@ namespace ThinkerThings.Servicos.Usuarios.Conta.UnitTest.Application.Servicos
         public void Teste11()
         {
             //Arrange
-            const int TEMPO_EXPIRACAO = 8;
+            const int TEMPO_EXPIRACAO_EM_HORAS = 8;
 
             configuracoesHashOptions.Value
-                .Returns(_ => new ConfiguracoesHash { TempoExpiracaoEmHoras = TEMPO_EXPIRACAO });
+                .Returns(_ => new ConfiguracoesHash { TempoExpiracaoEmHoras = TEMPO_EXPIRACAO_EM_HORAS });
 
             var sut = new RequisicaoSenhaUsuarioServico(requisicaoSenhaUsuarioRepositorio, configuracoesHashOptions);
             var requisicaoSenha = RequisicaoSenhaUsuario.Criar(FakeData.UsuarioValido, DateTimeOffset.Now.AddHours(-9));
@@ -66,13 +66,13 @@ namespace ThinkerThings.Servicos.Usuarios.Conta.UnitTest.Application.Servicos
         public void DataExpiracao()
         {
             //Arrange
-            const int TEMPO_EXPIRACAO = 8;
+            const int TEMPO_EXPIRACAO_EM_HORAS = 8;
+
+            configuracoesHashOptions.Value
+                .Returns(_ => new ConfiguracoesHash { TempoExpiracaoEmHoras = TEMPO_EXPIRACAO_EM_HORAS });
 
             var sut = new RequisicaoSenhaUsuarioServico(requisicaoSenhaUsuarioRepositorio, configuracoesHashOptions);
             var requisicaoSenha = RequisicaoSenhaUsuario.Criar(FakeData.UsuarioValido, DateTimeOffset.Now.AddHours(-1));
-
-            configuracoesHashOptions.Value
-                .Returns(_ => new ConfiguracoesHash { TempoExpiracaoEmHoras = TEMPO_EXPIRACAO });
 
             requisicaoSenha.Value.DataExpiracao = DateTimeOffset.Now;
 

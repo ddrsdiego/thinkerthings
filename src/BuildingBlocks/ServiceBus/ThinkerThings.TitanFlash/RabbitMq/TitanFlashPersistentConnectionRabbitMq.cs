@@ -30,8 +30,8 @@ namespace ThinkerThings.TitanFlash.RabbitMq
 
         public TitanFlashPersistentConnectionRabbitMq(IHostSetting hostSetting, ILoggerFactory loggerFactory)
         {
+            _titanFlashMonitor = TitanFlashMonitor.Create(_connectionFactory, loggerFactory);
             _hostSetting = hostSetting ?? throw new ArgumentNullException(nameof(hostSetting));
-            _titanFlashMonitor = new TitanFlashMonitor(_connectionFactory, loggerFactory);
             _logger = loggerFactory.CreateLogger(nameof(TitanFlashPersistentConnectionRabbitMq)) ?? throw new ArgumentException(nameof(loggerFactory));
 
             _connectionFactory = CreateConnection();
@@ -48,13 +48,7 @@ namespace ThinkerThings.TitanFlash.RabbitMq
             };
         }
 
-        public bool IsConnected
-        {
-            get
-            {
-                return _connection?.IsOpen == true && !_disposed;
-            }
-        }
+        public bool IsConnected => _connection?.IsOpen == true && !_disposed;
 
         public IModel CreateModel()
         {
@@ -69,6 +63,8 @@ namespace ThinkerThings.TitanFlash.RabbitMq
 
         public bool TryConnect()
         {
+            if (_disposed) return true;
+
             lock (sync_root)
             {
                 var policy = Policy.Handle<SocketException>()
@@ -106,13 +102,16 @@ namespace ThinkerThings.TitanFlash.RabbitMq
 
             _disposed = true;
 
-            try
+            if (_connection != null)
             {
-                _connection.Dispose();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Ocorreu um erro ao realizar o dispose do objeto", ex);
+                try
+                {
+                    _connection.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("Ocorreu um erro ao realizar o dispose do objeto", ex);
+                }
             }
         }
 

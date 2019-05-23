@@ -32,6 +32,27 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
         }
 
         [Test]
+        public void Deve_Lancar_Execessao_Quando_Injecao_Dependecia_Falhar()
+        {
+            //Assert
+            Assert.That(() => new SolicitarAtendimentoHandler(null, null, null),
+                Throws.Exception
+                .TypeOf<ArgumentNullException>());
+
+            Assert.That(() => new SolicitarAtendimentoHandler(null, protocoloServico, usuarioSolicitanteServico),
+                Throws.Exception
+                .TypeOf<ArgumentNullException>());
+
+            Assert.That(() => new SolicitarAtendimentoHandler(mediator, null, usuarioSolicitanteServico),
+                Throws.Exception
+                .TypeOf<ArgumentNullException>());
+
+            Assert.That(() => new SolicitarAtendimentoHandler(mediator, protocoloServico, null),
+                Throws.Exception
+                .TypeOf<ArgumentNullException>());
+        }
+
+        [Test]
         public async Task Deve_Retornar_Falha_Quando_Request_Invalido()
         {
             //Arrange
@@ -193,6 +214,37 @@ namespace ThinkerThings.GerenciamentoProtocolo.UnitTest.Application.Handlers
 
             protocoloServico.Received().RegistrarNovoProtocolo(Arg.Any<Protocolo>()).GetAwaiter();
             response.Value.NovoNumeroProtocolo.Should().Be(novoNumeroProtocolo);
+        }
+
+        [Test]
+        public async Task Deve_Retornar_Falha_Quando_GerarNumeroProtocolo_Lancar_Execessao()
+        {
+            //Arrange
+            protocoloServico.GerarNumeroProtocolo()
+                .Returns(_ => Task.FromException(new Exception()));
+
+            usuarioSolicitanteServico.ConsultarUsuarioSolicitantePorCPF(Arg.Any<string>())
+                .Returns(_ => Result<UsuarioSolicitante>.Fail(""));
+
+            mediator.Send(Arg.Any<RegistrarNovoUsuarioSolicitanteCommand>())
+                .Returns(_ => Result<RegistrarNovoUsuarioSolicitanteResponse>.Fail(""));
+
+            var sut = new SolicitarAtendimentoHandler(mediator, protocoloServico, usuarioSolicitanteServico);
+
+            //Act
+            var response = await sut.Handle(FakeData.SolicitarAtendimentoCommandValido, default(CancellationToken)).ConfigureAwait(false);
+
+            //Assert
+
+            Assert.Multiple(() =>
+            {
+                Assert.IsNotNull(response);
+                Assert.IsInstanceOf<Result<SolicitarAtendimentoResponse>>(response);
+                Assert.IsNull(response.Value);
+            });
+
+            response.IsFailure.Should().BeTrue();
+            response.Messages.Count.Should().Be(1);
         }
 
         [TearDown]

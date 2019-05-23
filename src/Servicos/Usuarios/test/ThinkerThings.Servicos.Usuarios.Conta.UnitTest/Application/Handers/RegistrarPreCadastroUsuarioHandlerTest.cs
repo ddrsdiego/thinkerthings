@@ -4,6 +4,7 @@ using FluentAssertions;
 using MediatR;
 using NSubstitute;
 using NUnit.Framework;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands;
@@ -44,7 +45,7 @@ namespace ThinkerThings.Servicos.Usuarios.Conta.UnitTest.Application.Handers
         public async Task Deve_Retornar_Falha_Quando_Command_For_Invalido()
         {
             //Arrange
-            var command = FakeData.RegistrarPreCadastroUsuarioCommandValido;
+            var command = FakeData.RegistrarPreCadastroUsuarioCommandInvalido;
             var sut = new RegistrarPreCadastroUsuarioHandler(mediator, usuarioServico);
 
             //Act
@@ -76,17 +77,22 @@ namespace ThinkerThings.Servicos.Usuarios.Conta.UnitTest.Application.Handers
         }
 
         [Test]
-        public async Task Deve_Retornar_Sucesso_Quando_Registrar_Pre_Cadastro()
+        public async Task Deve_Retornar_Falha_Quando_Verificar_Usuario_Ja_Cadastrado_Lancar_Excessao()
         {
             //Arrange
+
+            usuarioServico.VerificarUsuarioJaCadastrado(Arg.Any<string>(), Arg.Any<string>())
+                .Returns(_ => Task.FromException(new Exception()));
+
+            var command = FakeData.RegistrarPreCadastroUsuarioCommandValido;
             var sut = new RegistrarPreCadastroUsuarioHandler(mediator, usuarioServico);
 
             //Act
-            var response = await sut.Handle(null, default(CancellationToken));
+            var response = await sut.Handle(command, default(CancellationToken));
 
             //Assert
-            response.IsFailure.Should().BeFalse();
             response.IsFailure.Should().BeTrue();
+            response.IsSuccess.Should().BeFalse();
         }
 
         [TearDown]
@@ -96,7 +102,7 @@ namespace ThinkerThings.Servicos.Usuarios.Conta.UnitTest.Application.Handers
         }
     }
 
-    internal static class FakeData
+    internal static partial class FakeData
     {
         public static RegistrarPreCadastroUsuarioCommand RegistrarPreCadastroUsuarioCommandValido
         {

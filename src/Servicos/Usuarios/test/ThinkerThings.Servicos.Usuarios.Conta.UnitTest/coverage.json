@@ -1,0 +1,2177 @@
+{
+  "ThinkerThings.Servicos.Usuarios.Conta.Api.dll": {
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Program.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Program": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Program::Main(System.String[])": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Hosting.IWebHostBuilder ThinkerThings.Servicos.Usuarios.Conta.Api.Program::CreateWebHostBuilder(System.String[])": {
+          "Lines": {
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Startup.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration ThinkerThings.Servicos.Usuarios.Conta.Api.Startup::get_Configuration()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 9,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Options\\ConfiguracoesHash.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Options.ConfiguracoesHash": {
+        "System.Int32 ThinkerThings.Servicos.Usuarios.Conta.Api.Options.ConfiguracoesHash::get_TempoExpiracaoEmHoras()": {
+          "Lines": {
+            "5": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Extensions\\IoC\\RepositoriosContainer.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Extensions.IoC.RepositoriosContainer": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection ThinkerThings.Servicos.Usuarios.Conta.Api.Extensions.IoC.RepositoriosContainer::AddRepositorios(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Extensions\\IoC\\ServicosContainer.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Extensions.IoC.ServicosContainer": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection ThinkerThings.Servicos.Usuarios.Conta.Api.Extensions.IoC.ServicosContainer::AddServicos(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Extensions\\IoC\\ServicosUsuariosContaContainer.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Extensions.IoC.ServicosUsuariosContaContainer": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection ThinkerThings.Servicos.Usuarios.Conta.Api.Extensions.IoC.ServicosUsuariosContaContainer::AddUsuariosContaServicos(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Controllers\\ValuesController.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Controllers.ValuesController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<System.String>> ThinkerThings.Servicos.Usuarios.Conta.Api.Controllers.ValuesController::Get()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.String> ThinkerThings.Servicos.Usuarios.Conta.Api.Controllers.ValuesController::Get(System.Int32)": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Controllers.ValuesController::Post(System.String)": {
+          "Lines": {
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Controllers.ValuesController::Put(System.Int32,System.String)": {
+          "Lines": {
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Controllers.ValuesController::Delete(System.Int32)": {
+          "Lines": {
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Validators\\RegistrarPreCadastroUsuarioCommandValidator.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Validators.RegistrarPreCadastroUsuarioCommandValidator": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Validators.RegistrarPreCadastroUsuarioCommandValidator::.ctor()": {
+          "Lines": {
+            "8": 2,
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Validators\\RegistrarRequisicaoCriacaoSenhaCommandValidator.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Validators.RegistrarRequisicaoCriacaoSenhaCommandValidator": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Validators.RegistrarRequisicaoCriacaoSenhaCommandValidator::.ctor()": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Servicos\\RequisicaoSenhaUsuarioServico.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico": {
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico::ValidarHashRequisicaoSenha(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario)": {
+          "Lines": {
+            "63": 3,
+            "64": 3,
+            "65": 0,
+            "67": 3,
+            "68": 0,
+            "71": 3,
+            "72": 3,
+            "73": 1,
+            "75": 2,
+            "76": 2,
+            "78": 2,
+            "79": 1,
+            "81": 1,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 3
+          },
+          "Branches": [
+            {
+              "Line": 64,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 7,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 67,
+              "Offset": 41,
+              "EndOffset": 43,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 41,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 72,
+              "Offset": 84,
+              "EndOffset": 86,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 72,
+              "Offset": 84,
+              "EndOffset": 99,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 78,
+              "Offset": 153,
+              "EndOffset": 155,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 153,
+              "EndOffset": 168,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico::.ctor(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.IRequisicaoSenhaUsuarioRepositorio,Microsoft.Extensions.Options.IOptions`1<ThinkerThings.Servicos.Usuarios.Conta.Api.Options.ConfiguracoesHash>)": {
+          "Lines": {
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 23,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<ConsultarRequisicaoPorHash>d__3": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<ConsultarRequisicaoPorHash>d__3::MoveNext()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 53,
+              "EndOffset": 120,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<RegistrarRequisicaoSenha>d__4": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<RegistrarRequisicaoSenha>d__4::MoveNext()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 44,
+              "EndOffset": 110,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<ExecutarConsultaRequisicaoPorHash>d__5": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<ExecutarConsultaRequisicaoPorHash>d__5::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 37,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 57,
+              "EndOffset": 63,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 100,
+              "EndOffset": 102,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 57,
+              "EndOffset": 143,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 100,
+              "EndOffset": 172,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 217,
+              "EndOffset": 219,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 217,
+              "EndOffset": 232,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<ExecutarRegistorRequisicaoSenha>d__6": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.RequisicaoSenhaUsuarioServico/<ExecutarRegistorRequisicaoSenha>d__6::MoveNext()": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 26,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 46,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 46,
+              "EndOffset": 137,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 98,
+              "EndOffset": 165,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Servicos\\UsuarioServico.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico::.ctor(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.IUsuarioRepositorio)": {
+          "Lines": {
+            "12": 7,
+            "13": 7,
+            "14": 7,
+            "15": 7
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<ConsultarUsuarioPorId>d__2": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<ConsultarUsuarioPorId>d__2::MoveNext()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 53,
+              "EndOffset": 120,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<ExecutarConsultaUsuarioPorId>d__3": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<ExecutarConsultaUsuarioPorId>d__3::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 21,
+              "Offset": 17,
+              "EndOffset": 100,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 59,
+              "EndOffset": 128,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 173,
+              "EndOffset": 175,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 173,
+              "EndOffset": 188,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<RegistrarNovoUsuario>d__4": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<RegistrarNovoUsuario>d__4::MoveNext()": {
+          "Lines": {
+            "37": 3,
+            "38": 3,
+            "39": 1,
+            "42": 2,
+            "43": 2,
+            "44": 1,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "50": 3
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 26,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 39,
+              "Offset": 46,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 43,
+              "Offset": 98,
+              "EndOffset": 165,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<VerificarUsuarioJaCadastrado>d__5": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Servicos.UsuarioServico/<VerificarUsuarioJaCadastrado>d__5::MoveNext()": {
+          "Lines": {
+            "53": 4,
+            "54": 4,
+            "55": 0,
+            "57": 4,
+            "58": 0,
+            "61": 4,
+            "62": 4,
+            "63": 4,
+            "65": 4,
+            "67": 4,
+            "68": 4,
+            "70": 4,
+            "71": 1,
+            "73": 3,
+            "74": 1,
+            "76": 2,
+            "77": 1,
+            "79": 1,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 4
+          },
+          "Branches": [
+            {
+              "Line": 54,
+              "Offset": 27,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 57,
+              "Offset": 56,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            },
+            {
+              "Line": 58,
+              "Offset": 76,
+              "EndOffset": 110,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 4
+            },
+            {
+              "Line": 65,
+              "Offset": 210,
+              "EndOffset": 282,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 4
+            },
+            {
+              "Line": 67,
+              "Offset": 320,
+              "EndOffset": 392,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 4
+            },
+            {
+              "Line": 68,
+              "Offset": 454,
+              "EndOffset": 526,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 4
+            },
+            {
+              "Line": 70,
+              "Offset": 564,
+              "EndOffset": 566,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 2
+            },
+            {
+              "Line": 70,
+              "Offset": 564,
+              "EndOffset": 577,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 2
+            },
+            {
+              "Line": 70,
+              "Offset": 582,
+              "EndOffset": 584,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 1
+            },
+            {
+              "Line": 70,
+              "Offset": 582,
+              "EndOffset": 593,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 3
+            },
+            {
+              "Line": 73,
+              "Offset": 606,
+              "EndOffset": 608,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 1
+            },
+            {
+              "Line": 73,
+              "Offset": 606,
+              "EndOffset": 617,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 2
+            },
+            {
+              "Line": 76,
+              "Offset": 630,
+              "EndOffset": 632,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 1
+            },
+            {
+              "Line": 76,
+              "Offset": 630,
+              "EndOffset": 641,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Responses\\RegistrarPreCadastroUsuarioResponse.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Responses.RegistrarPreCadastroUsuarioResponse": {
+        "System.Int32 ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Responses.RegistrarPreCadastroUsuarioResponse::get_UsuarioId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Responses.RegistrarPreCadastroUsuarioResponse::get_NomeUsuario()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Responses.RegistrarPreCadastroUsuarioResponse::get_EmailUsuario()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Responses.RegistrarPreCadastroUsuarioResponse::get_CpfUsuario()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Handlers\\RegistrarPreCadastroUsuarioHandler.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler": {
+        "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Responses.RegistrarPreCadastroUsuarioResponse ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler::CriarResponse(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler::ValidarRequest(ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand)": {
+          "Lines": {
+            "69": 3,
+            "70": 3,
+            "71": 1,
+            "73": 2,
+            "74": 2,
+            "75": 2,
+            "76": 0,
+            "78": 2,
+            "79": 3
+          },
+          "Branches": [
+            {
+              "Line": 70,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 70,
+              "Offset": 7,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 75,
+              "Offset": 49,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 63,
+              "EndOffset": 65,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 63,
+              "EndOffset": 88,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 75,
+              "Offset": 49,
+              "EndOffset": 101,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler::.ctor(MediatR.IMediator,ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.IUsuarioServico)": {
+          "Lines": {
+            "19": 3,
+            "20": 3,
+            "21": 3,
+            "22": 3,
+            "23": 3
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler/<Handle>d__3": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 1,
+            "31": 2,
+            "32": 2,
+            "33": 1,
+            "35": 1,
+            "36": 1,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 3
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 73,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 73,
+              "EndOffset": 97,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 31,
+              "Offset": 127,
+              "EndOffset": 197,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 32,
+              "Offset": 244,
+              "EndOffset": 246,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 32,
+              "Offset": 244,
+              "EndOffset": 268,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 286,
+              "EndOffset": 288,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler/<RegistrarNovoUsuario>d__6": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler/<RegistrarNovoUsuario>d__6::MoveNext()": {
+          "Lines": {
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0
+          },
+          "Branches": [
+            {
+              "Line": 82,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 85,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 17,
+              "EndOffset": 100,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 85,
+              "Offset": 59,
+              "EndOffset": 128,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 175,
+              "EndOffset": 196,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler/<VerificarUsuarioJaCadastrado>d__7": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarPreCadastroUsuarioHandler/<VerificarUsuarioJaCadastrado>d__7::MoveNext()": {
+          "Lines": {
+            "98": 2,
+            "100": 2,
+            "101": 2,
+            "102": 2,
+            "103": 0,
+            "105": 1,
+            "107": 1,
+            "108": 1,
+            "109": 1,
+            "111": 2
+          },
+          "Branches": [
+            {
+              "Line": 98,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 101,
+              "Offset": 75,
+              "EndOffset": 144,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 102,
+              "Offset": 191,
+              "EndOffset": 212,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Handlers\\RegistrarRequisicaoCriacaoSenhaHandler.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarRequisicaoCriacaoSenhaHandler": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarRequisicaoCriacaoSenhaHandler::.ctor(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.IUsuarioServico,ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.IRequisicaoSenhaUsuarioServico)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarRequisicaoCriacaoSenhaHandler/<>c": {
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarRequisicaoCriacaoSenhaHandler/<>c::<Handle>b__3_0(FluentValidation.Results.ValidationFailure)": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarRequisicaoCriacaoSenhaHandler/<Handle>d__3": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.RegistrarRequisicaoCriacaoSenhaHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 14,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 79,
+              "EndOffset": 81,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 98,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 79,
+              "EndOffset": 139,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 179,
+              "EndOffset": 181,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 179,
+              "EndOffset": 249,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 296,
+              "EndOffset": 298,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 296,
+              "EndOffset": 320,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 388,
+              "EndOffset": 390,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 14,
+              "EndOffset": 431,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 388,
+              "EndOffset": 460,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 507,
+              "EndOffset": 509,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 507,
+              "EndOffset": 528,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Handlers\\ValidarHashCriacaoHandler.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler": {
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler::ValidarHashRequisicaoSenha(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario)": {
+          "Lines": {
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 23,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler::.ctor(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.IRequisicaoSenhaUsuarioServico)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler/<Handle>d__2": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 45,
+              "EndOffset": 114,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 161,
+              "EndOffset": 163,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 161,
+              "EndOffset": 182,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 225,
+              "EndOffset": 227,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 225,
+              "EndOffset": 246,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler/<ConsultarRequisicaoPorHash>d__3": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Handlers.ValidarHashCriacaoHandler/<ConsultarRequisicaoPorHash>d__3::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 64,
+              "EndOffset": 66,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 17,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 64,
+              "EndOffset": 133,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 180,
+              "EndOffset": 182,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 180,
+              "EndOffset": 201,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Commands\\RegistrarPreCadastroUsuarioCommand.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand": {
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand::get_NomeUsuario()": {
+          "Lines": {
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand::get_EmailUsuario()": {
+          "Lines": {
+            "18": 6
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand::get_CpfUsuario()": {
+          "Lines": {
+            "19": 4
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand::get_TelefoneUsuario()": {
+          "Lines": {
+            "20": 2
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarPreCadastroUsuarioCommand::.ctor(System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "9": 2,
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Commands\\RegistrarRequisicaoCriacaoSenhaCommand.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarRequisicaoCriacaoSenhaCommand": {
+        "System.Int32 ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarRequisicaoCriacaoSenhaCommand::get_UsuarioId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.RegistrarRequisicaoCriacaoSenhaCommand::.ctor(System.Int32)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Api\\Application\\Commands\\ValidarHashCriacaoCommand.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.ValidarHashCriacaoCommand": {
+        "System.Guid ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.ValidarHashCriacaoCommand::get_HashRequisicaoSenha()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Api.Application.Commands.ValidarHashCriacaoCommand::.ctor(System.Guid)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "ThinkerThings.Servicos.Usuarios.Conta.Domain.dll": {
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Domain\\SeedWorks\\Result.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result": {
+        "System.Collections.Generic.ISet`1<System.String> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::get_Messages()": {
+          "Lines": {
+            "22": 43
+          },
+          "Branches": []
+        },
+        "System.Boolean ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::get_IsFailure()": {
+          "Lines": {
+            "24": 19
+          },
+          "Branches": []
+        },
+        "System.Boolean ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::get_IsSuccess()": {
+          "Lines": {
+            "26": 32
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::Ok()": {
+          "Lines": {
+            "28": 4
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::Fail(System.String)": {
+          "Lines": {
+            "30": 5
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::Fail(System.Collections.Generic.IEnumerable`1<System.String>)": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::.ctor()": {
+          "Lines": {
+            "7": 22,
+            "8": 22,
+            "9": 22,
+            "10": 22
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::.ctor(System.String)": {
+          "Lines": {
+            "12": 7,
+            "13": 7,
+            "14": 7,
+            "15": 7
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result::.ctor(System.Collections.Generic.IEnumerable`1<System.String>)": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1": {
+        "TValue ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::get_Value()": {
+          "Lines": {
+            "48": 12
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<TValue> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::Ok(TValue)": {
+          "Lines": {
+            "50": 9
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<TValue> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::Fail(System.String)": {
+          "Lines": {
+            "52": 2
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<TValue> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::Fail(System.Collections.Generic.IEnumerable`1<System.String>)": {
+          "Lines": {
+            "54": 2
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<TValue> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::Success(TValue)": {
+          "Lines": {
+            "56": 0
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<TValue> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::Error(System.String)": {
+          "Lines": {
+            "58": 0
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<TValue> ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::Error(System.Collections.Generic.IEnumerable`1<System.String>)": {
+          "Lines": {
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::.ctor(System.String)": {
+          "Lines": {
+            "38": 6
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::.ctor(System.Collections.Generic.IEnumerable`1<System.String>)": {
+          "Lines": {
+            "41": 6
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1::.ctor(TValue)": {
+          "Lines": {
+            "43": 9,
+            "44": 9,
+            "45": 9,
+            "46": 9
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Domain\\AggregateModel\\UsuarioModel\\Usuario.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario": {
+        "System.Int32 ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_UsuarioId()": {
+          "Lines": {
+            "7": 12
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_Nome()": {
+          "Lines": {
+            "8": 9
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_CPF()": {
+          "Lines": {
+            "9": 13
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_Email()": {
+          "Lines": {
+            "10": 13
+          },
+          "Branches": []
+        },
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_Telefone()": {
+          "Lines": {
+            "11": 9
+          },
+          "Branches": []
+        },
+        "System.DateTimeOffset ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_DataCadastro()": {
+          "Lines": {
+            "12": 13
+          },
+          "Branches": []
+        },
+        "System.DateTimeOffset ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario::get_DataUltimaAlteracao()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Domain\\AggregateModel\\SenhaModel\\RequisicaoSenhaUsuario.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario": {
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::get_Usuario()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Guid ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::get_HashRequisicaoSenha()": {
+          "Lines": {
+            "20": 3
+          },
+          "Branches": []
+        },
+        "System.DateTimeOffset ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::get_DataRequisicao()": {
+          "Lines": {
+            "21": 2
+          },
+          "Branches": []
+        },
+        "System.DateTimeOffset ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::get_DataExpiracao()": {
+          "Lines": {
+            "22": 8
+          },
+          "Branches": []
+        },
+        "ThinkerThings.Servicos.Usuarios.Conta.Domain.SeedWorks.Result`1<ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario> ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::Criar(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario,System.DateTimeOffset)": {
+          "Lines": {
+            "25": 3,
+            "26": 3,
+            "27": 0,
+            "29": 3,
+            "30": 0,
+            "32": 3,
+            "33": 0,
+            "35": 3,
+            "36": 3
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 18,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 29,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 37,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 32,
+              "Offset": 64,
+              "EndOffset": 66,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 64,
+              "EndOffset": 77,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario::.ctor(ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario,System.DateTimeOffset)": {
+          "Lines": {
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "ThinkerThings.Servicos.Usuarios.Conta.Infra.dll": {
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Infra\\Repositorios\\RepositorioSqlServer.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RepositorioSqlServer": {
+        "Microsoft.Extensions.Logging.ILogger ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RepositorioSqlServer::get_Logger()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Data.IDbConnection ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RepositorioSqlServer::GetConnection()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RepositorioSqlServer::.ctor(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Options.IOptions`1<ThinkerThings.Servicos.Usuarios.Conta.Infra.Options.ConnectionStringOptions>)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Infra\\Repositorios\\RequisicaoSenhaUsuarioRepositorio.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RequisicaoSenhaUsuarioRepositorio": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RequisicaoSenhaUsuarioRepositorio::.ctor(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Options.IOptions`1<ThinkerThings.Servicos.Usuarios.Conta.Infra.Options.ConnectionStringOptions>)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RequisicaoSenhaUsuarioRepositorio/<ConsultarRequisicaoPorHash>d__1": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RequisicaoSenhaUsuarioRepositorio/<ConsultarRequisicaoPorHash>d__1::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 17,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 43,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 58,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 58,
+              "EndOffset": 98,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 195,
+              "EndOffset": 197,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 43,
+              "EndOffset": 237,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 195,
+              "EndOffset": 265,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RequisicaoSenhaUsuarioRepositorio/<RegistrarRequisicaoSenha>d__2": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.RequisicaoSenhaUsuarioRepositorio/<RegistrarRequisicaoSenha>d__2::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 14,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 41,
+              "EndOffset": 43,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 41,
+              "EndOffset": 110,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 14,
+              "EndOffset": 135,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 138,
+              "EndOffset": 144,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 200,
+              "EndOffset": 202,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 138,
+              "EndOffset": 238,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 200,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Infra\\Repositorios\\UsuarioRepositorio.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio": {
+        "System.Threading.Tasks.Task`1<ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario> ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio::ConsultarUsuarioPorCpf(System.String)": {
+          "Lines": {
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario> ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio::ConsultarUsuarioPorEmail(System.String)": {
+          "Lines": {
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario> ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio::ConsultarUsuarioPorId(System.Int32)": {
+          "Lines": {
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio::.ctor(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Options.IOptions`1<ThinkerThings.Servicos.Usuarios.Conta.Infra.Options.ConnectionStringOptions>)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio/<RegistrarNovoUsuario>d__4": {
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.Repositorios.UsuarioRepositorio/<RegistrarNovoUsuario>d__4::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 17,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 17,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 43,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 113,
+              "EndOffset": 115,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 43,
+              "EndOffset": 155,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 113,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Infra\\Options\\ConnectionStringOptions.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.Options.ConnectionStringOptions": {
+        "System.String ThinkerThings.Servicos.Usuarios.Conta.Infra.Options.ConnectionStringOptions::get_ConnectionString()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\ThinkerThings\\src\\Servicos\\Usuarios\\ThinkerThings.Servicos.Usuarios.Conta.Infra\\DataContext\\ServicosUsuariosContaDataContext.cs": {
+      "ThinkerThings.Servicos.Usuarios.Conta.Infra.DataContext.ServicosUsuariosContaDataContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.UsuarioModel.Usuario> ThinkerThings.Servicos.Usuarios.Conta.Infra.DataContext.ServicosUsuariosContaDataContext::get_Usuario()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<ThinkerThings.Servicos.Usuarios.Conta.Domain.AggregateModel.SenhaModel.RequisicaoSenhaUsuario> ThinkerThings.Servicos.Usuarios.Conta.Infra.DataContext.ServicosUsuariosContaDataContext::get_RequisicoesSenhaUsuarios()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.DataContext.ServicosUsuariosContaDataContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void ThinkerThings.Servicos.Usuarios.Conta.Infra.DataContext.ServicosUsuariosContaDataContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions,Microsoft.Extensions.Options.IOptions`1<ThinkerThings.Servicos.Usuarios.Conta.Infra.Options.ConnectionStringOptions>)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
